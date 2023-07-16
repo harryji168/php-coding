@@ -1,4 +1,7 @@
-<!-- Have the function StringChallenge(strArr) take the strArr parameter being passed, which will only contain a single element, and return the string true if it is a valid number that contains only digits with properly placed decimals and commas, otherwise return the string false. For example: if strArr is ["1,093,222.04"] then your program should return the string true, but if the input were ["1,093,22.04"] then your program should return the string false. The input may contain characters other than digits.
+<!-- Have the function StringChallenge(strArr) take the strArr parameter being passed, which will only contain a single
+element, and return the string true if it is a valid number that contains only digits with properly placed decimals and
+commas, otherwise return the string false. For example: if strArr is ["1,093,222.04"] then your program should return
+the string true, but if the input were ["1,093,22.04"] then your program should return the string false. The input may contain characters other than digits.
 Examples
 Input: array("0.232567")
 Output: true
@@ -6,7 +9,8 @@ Input: array("2,567.00.2")
 Output: false -->
 
 <?php
-function StringChallenge($strArr) {
+function StringChallenge($strArr)
+{
     // The input should be a string of digits, commas, and at most one decimal point.
     if (preg_match("/[^0-9.,]/", $strArr[0]) || substr_count($strArr[0], ".") > 1) {
         return "false";
