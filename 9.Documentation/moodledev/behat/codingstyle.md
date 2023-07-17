@@ -1,1 +1,0 @@
-https://moodledev.io/general/development/policies/codingstyle
