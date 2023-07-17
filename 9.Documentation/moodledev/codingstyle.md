@@ -28,8 +28,11 @@ Here are some highlights:
 
  keep in mind that the Moodle code checker plugin is a tool that can help you to follow these coding style guidelines.
 
- https://moodle.org/plugins/local_codechecker
+ ## https://moodle.org/plugins/local_codechecker
 
  https://github.com/moodlehq/moodle-local_codechecker
- 
+
  https://github.com/moodlehq/moodle-cs
+
+
+ ## https://moodle.org/plugins/local_moodlecheck
