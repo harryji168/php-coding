@@ -68,3 +68,85 @@ This will create a very basic theme based on the Boost theme with a custom layou
 Remember that creating a Moodle theme requires knowledge of HTML, CSS, and PHP, and it's important to test your theme thoroughly before deploying it to a live site. The Moodle theming documentation is a great resource if you're creating a Moodle theme.
 
 For more complex customizations, you might need to develop a Moodle plugin or modify Moodle's configuration settings. Always back up your Moodle site before making significant changes, and test all changes thoroughly before deploying them to a live site.
+
+
+PHP provides several functions to handle dates and times. Here are some of the most popular ones:
+
+1. `date()`: This function formats a local date and time.
+
+Example:
+
+```php
+<?php
+echo date("Y-m-d H:i:s");
+?>
+```
+This will output the current date and time in the format: `2023-07-16 14:20:00` 
+
+2. `strtotime()`: This function converts an English textual datetime description to a Unix timestamp.
+
+Example:
+
+```php
+<?php
+$timestamp = strtotime('next Monday');
+echo $timestamp;
+?>
+```
+
+3. `time()`: This function returns the current Unix timestamp.
+
+Example:
+
+```php
+<?php
+echo time();
+?>
+```
+
+4. `mktime()`: This function returns the Unix timestamp for a date.
+
+Example:
+
+```php
+<?php
+echo mktime(0, 0, 0, 7, 1, 2023);
+?>
+```
+
+5. `checkdate()`: This function validates a Gregorian date.
+
+Example:
+
+```php
+<?php
+var_dump(checkdate(12, 31, 2023));
+?>
+```
+
+6. `date_diff()`: This function returns the difference between two DateTime objects.
+
+Example:
+
+```php
+<?php
+$date1 = date_create("2023-07-16");
+$date2 = date_create("2023-12-31");
+$diff = date_diff($date1, $date2);
+echo $diff->format("%R%a days");
+?>
+```
+
+7. `date_add()`: This function adds an amount of days, months, years, hours, minutes and seconds to a DateTime object.
+
+Example:
+
+```php
+<?php
+$date = date_create("2023-07-16");
+date_add($date, date_interval_create_from_date_string('10 days'));
+echo date_format($date, 'Y-m-d');
+?>
+```
+
+These are some of the most commonly used PHP date and time functions. They can be very useful for managing and manipulating dates and times in PHP.
